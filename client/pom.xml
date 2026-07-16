@@ -6,10 +6,22 @@
         <groupId>com.example</groupId>
         <artifactId>reactive-rating-service</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <artifactId>reactive-rating-service-client</artifactId>
     <name>reactive-rating-service-client</name>
     <description>reactive-rating-service-client</description>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>reactive-rating-service-model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <optional>false</optional>
+        </dependency>
+    </dependencies>
 
 </project>
