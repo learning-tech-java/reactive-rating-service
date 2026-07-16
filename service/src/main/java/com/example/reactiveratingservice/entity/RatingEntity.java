@@ -23,7 +23,7 @@ public class RatingEntity {
     private UUID id;
 
     /**
-     * Код продукта
+     * Код товара
      */
     @Column("code")
     private String code;

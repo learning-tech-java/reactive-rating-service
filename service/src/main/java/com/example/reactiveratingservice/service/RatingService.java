@@ -6,10 +6,10 @@ import reactor.core.publisher.Mono;
 public interface RatingService {
 
     /**
-     * Получение рейтинга продукта по коду
+     * Получение рейтинга товара по коду
      *
-     * @param code - код продукта
-     * @return - рейтинг продукта
+     * @param code - код товара
+     * @return - рейтинг товара
      */
     Mono<Rating> getRatingByCode(String code);
 

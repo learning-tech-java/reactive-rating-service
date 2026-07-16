@@ -9,10 +9,10 @@ import java.util.UUID;
 public interface RatingRepository extends ReactiveCrudRepository<RatingEntity, UUID> {
 
     /**
-     * Поиск рейтинга продукта по коду
+     * Поиск рейтинга товара по коду
      *
-     * @param code - код продукта
-     * @return - рейтинг продукта
+     * @param code - код товара
+     * @return - рейтинг товара
      */
     Mono<RatingEntity> findByCode(String code);
 
