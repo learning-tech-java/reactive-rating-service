@@ -11,6 +11,6 @@ public interface RatingService {
      * @param code - код товара
      * @return - рейтинг товара
      */
-    Mono<Rating> getRatingByCode(String code);
+    Mono<Rating> getRatingByProductCode(String code);
 
 }

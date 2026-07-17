@@ -1,17 +1,21 @@
 package com.example.reactiveratingservice.entity;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.util.UUID;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
+@ToString
 @Table("rating")
 public class RatingEntity {
 
@@ -25,8 +29,8 @@ public class RatingEntity {
     /**
      * Код товара
      */
-    @Column("code")
-    private String code;
+    @Column("product_code")
+    private String productCode;
 
     /**
      * Значение рейтинга

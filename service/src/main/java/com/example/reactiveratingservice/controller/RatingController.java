@@ -16,10 +16,10 @@ public class RatingController {
 
     private final RatingService ratingService;
 
-    @GetMapping
-    public Mono<Rating> getRatingByCode(@PathVariable String code) {
+    @GetMapping("/{productCode}")
+    public Mono<Rating> getRatingByProductCode(@PathVariable String productCode) {
 
-        return ratingService.getRatingByCode(code);
+        return ratingService.getRatingByProductCode(productCode);
 
     }
 

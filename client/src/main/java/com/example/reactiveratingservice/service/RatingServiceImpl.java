@@ -9,7 +9,7 @@ import java.time.Duration;
 
 public class RatingServiceImpl implements RatingService {
 
-    public static final String GET_RATINGS_BY_CODE_URI = "/ratings/{code}";
+    public static final String GET_RATINGS_BY_CODE_URI = "/ratings/{productCode}";
     public static final Rating FALLBACK_VALUE = new Rating(0.0);
 
     private final WebClientProperties webClientProperties;
@@ -25,11 +25,11 @@ public class RatingServiceImpl implements RatingService {
     }
 
     @Override
-    public Mono<Rating> getRatingByCode(String code) {
+    public Mono<Rating> getRatingByProductCode(String productCode) {
 
         return webClient
                 .get()
-                .uri(GET_RATINGS_BY_CODE_URI, code)
+                .uri(GET_RATINGS_BY_CODE_URI, productCode)
                 .retrieve()
                 .bodyToMono(Rating.class)
                 .timeout(Duration.ofMillis(webClientProperties.getTimeout()))

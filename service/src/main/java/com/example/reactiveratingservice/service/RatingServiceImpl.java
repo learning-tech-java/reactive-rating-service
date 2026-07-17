@@ -16,11 +16,11 @@ public class RatingServiceImpl implements RatingService {
     private final RatingMapper ratingMapper;
 
     @Override
-    public Mono<Rating> getRatingByCode(String code) {
+    public Mono<Rating> getRatingByProductCode(String productCode) {
 
-        return ratingRepository.findByCode(code)
+        return ratingRepository.findByProductCode(productCode)
                 .switchIfEmpty(
-                        Mono.error(new RatingNotFoundException(code))
+                        Mono.error(new RatingNotFoundException(productCode))
                 )
                 .map(ratingMapper::toRating);
 

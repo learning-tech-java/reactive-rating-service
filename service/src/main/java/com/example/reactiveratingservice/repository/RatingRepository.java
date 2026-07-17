@@ -11,9 +11,9 @@ public interface RatingRepository extends ReactiveCrudRepository<RatingEntity, U
     /**
      * Поиск рейтинга товара по коду
      *
-     * @param code - код товара
+     * @param productCode - код товара
      * @return - рейтинг товара
      */
-    Mono<RatingEntity> findByCode(String code);
+    Mono<RatingEntity> findByProductCode(String productCode);
 
 }
