@@ -21,5 +21,4 @@ public class WebClientProperties {
      * Количество повторных попыток выполнения запроса при возникновении ошибки
      */
     private long numRetries = 2;
-
 }

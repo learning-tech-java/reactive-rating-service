@@ -14,3 +14,9 @@ spring:
     password: ${POSTGRES_PASSWORD}
     properties:
       schema: reactive_rating_service
+
+client:
+  reactive-product-service:
+    baseUrl: ${REACTIVE_PRODUCT_SERVICE_URL}
+    timeout: ${REACTIVE_PRODUCT_SERVICE_TIMEOUT}
+    numRetries: ${REACTIVE_PRODUCT_SERVICE_RETRIES_NUMBER}

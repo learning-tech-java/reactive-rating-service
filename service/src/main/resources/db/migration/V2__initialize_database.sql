@@ -4,9 +4,7 @@ CREATE TABLE IF NOT EXISTS reactive_rating_service.rating
 (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     product_code VARCHAR(255) NOT NULL,
-    value DECIMAL(3, 2),
-
-    CONSTRAINT ux_product_code UNIQUE (product_code)
+    value DECIMAL(3, 2) CHECK(value BETWEEN 1 AND 5)
 );
 
 COMMENT ON TABLE reactive_rating_service.rating IS 'Рейтинги';

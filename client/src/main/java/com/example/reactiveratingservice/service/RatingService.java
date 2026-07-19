@@ -1,16 +1,15 @@
 package com.example.reactiveratingservice.service;
 
-import com.example.reactiveratingservice.common.Rating;
+import com.example.reactiveratingservice.common.AvgRating;
 import reactor.core.publisher.Mono;
 
 public interface RatingService {
 
     /**
-     * Получение рейтинга товара по коду
+     * Получение среднего рейтинга товара по коду
      *
-     * @param code - код товара
-     * @return - рейтинг товара
+     * @param productCode - код товара
+     * @return - средний рейтинг товара
      */
-    Mono<Rating> getRatingByProductCode(String code);
-
+    Mono<AvgRating> getAvgRatingByProductCode(String productCode);
 }

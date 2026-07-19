@@ -13,9 +13,6 @@ public class ReactiveRatingServiceClientAutoConfiguration {
 
     @Bean
     public RatingService ratingService(WebClientProperties webClientProperties, WebClient.Builder builder) {
-
         return new RatingServiceImpl(webClientProperties, builder);
-
     }
-
 }
